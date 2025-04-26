@@ -37,8 +37,13 @@ java -jar target/Tic-Tac-Toe-Fx-1.0-SNAPSHOT.jar
 
 ## Screenshots
 
-[Screenshots would be added here]
+<div style="display: flex; justify-content: space-around;">
+    <img src="https://github.com/user-attachments/assets/31fbe684-b1e4-4faf-8f51-30dbe756aa45" alt="Screenshot 2" width="300"/>
+    <img src="https://github.com/user-attachments/assets/3bd27df9-b256-4f04-8ee5-a3c2b53f50f9" alt="Screenshot 1" width="300"/>
+    <img src="https://github.com/user-attachments/assets/6b3765c0-a497-4c59-9bb8-ca26a53da00b" alt="Screenshot 3" width="300"/>
+</div>
+
 
 ## License
 
-[Your chosen license]
+This project is not licensed. You are free to use, modify, and distribute this software without any restrictions.
