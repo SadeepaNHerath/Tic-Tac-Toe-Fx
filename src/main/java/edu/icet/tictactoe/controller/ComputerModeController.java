@@ -1,4 +1,4 @@
-package controller;
+package edu.icet.tictactoe.controller;
 
 import java.awt.Desktop;
 import java.net.URI;
@@ -11,6 +11,8 @@ import java.util.ResourceBundle;
 
 import com.jfoenix.controls.JFXButton;
 
+import edu.icet.tictactoe.model.GameDifficulty;
+import edu.icet.tictactoe.model.ScoreBoard;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,8 +23,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import model.GameDifficulty;
-import model.ScoreBoard;
 
 public class ComputerModeController implements Initializable {
 

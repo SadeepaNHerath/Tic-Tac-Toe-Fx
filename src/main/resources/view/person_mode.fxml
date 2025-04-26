@@ -149,5 +149,58 @@
             <Font name="Centaur" size="24.0" />
          </font>
       </Label>
+      
+      <!-- Scoreboard Section -->
+      <Pane layoutX="37.0" layoutY="263.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #333333; -fx-background-radius: 10;">
+         <children>
+            <Text fill="WHITE" layoutX="25.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scoreboard">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="20.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player X:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="20.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player O:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="20.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Draws:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblPlayerXScore" layoutX="100.0" layoutY="46.0" text="0" textFill="#00c853">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPlayerOScore" layoutX="100.0" layoutY="76.0" text="0" textFill="#f44336">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDrawScore" layoutX="100.0" layoutY="106.0" text="0" textFill="#ffc107">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      
+      <JFXButton fx:id="btnResetScore" alignment="CENTER" layoutX="60.0" layoutY="430.0" onAction="#btnResetScoreOnAction" prefHeight="30.0" prefWidth="110.0" style="-fx-border-color: #F44336; -fx-border-radius: 5px;" text="Reset Score" textFill="#f44336">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      
+      <JFXButton fx:id="btnSwitchFirst" alignment="CENTER" layoutX="60.0" layoutY="480.0" onAction="#btnSwitchFirstOnAction" prefHeight="30.0" prefWidth="110.0" style="-fx-border-color: #FFC107; -fx-border-radius: 5px;" text="O First" textFill="#ffc107">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
