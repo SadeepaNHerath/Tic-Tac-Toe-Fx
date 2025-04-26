@@ -1,14 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="view.ComputerModeWindow"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #212529;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ComputerModeController">
+   <children>
+      <Pane layoutX="124.0" layoutY="27.0" prefHeight="68.0" prefWidth="556.0" style="-fx-background-color: #d36d13;">
+         <children>
+            <ImageView fitHeight="77.0" fitWidth="131.0" layoutX="422.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/joystick.png" />
+               </image>
+            </ImageView>
+            <Text fill="#222120" layoutX="169.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tic Tac Toe">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutY="730.0" prefHeight="50.0" prefWidth="804.0" style="-fx-background-color: #424242;">
+         <children>
+            <ImageView fx:id="icnWeb" fitHeight="29.0" fitWidth="30.0" layoutX="599.0" layoutY="11.0" onMouseClicked="#icnWebClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/web.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="42.0" layoutY="16.0" text="© 2024   Sadeepa N Herath" textFill="WHITE">
+               <font>
+                  <Font name="Tahoma" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="icnLinkedIn" fitHeight="29.0" fitWidth="29.0" layoutX="655.0" layoutY="11.0" onMouseClicked="#icnLinkedInClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/linkedin.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="icnFacebook" fitHeight="29.0" fitWidth="29.0" layoutX="709.0" layoutY="11.0" onMouseClicked="#icnFacebookClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/facebook.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnBack" layoutX="37.0" layoutY="121.0" onAction="#btnBackOnAction" prefHeight="40.0" prefWidth="87.0" style="-fx-background-radius: 10px; -fx-border-color: #FFFFFF; -fx-border-radius: 10px;" text="← Back" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Text fill="#fcfcfc" layoutX="216.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player Vs Computer">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Text>
+      <GridPane alignment="CENTER" layoutX="227.0" layoutY="263.0" prefHeight="363.0" prefWidth="360.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXButton fx:id="btn2" alignment="CENTER" layoutX="25.0" layoutY="10.0" onAction="#btn2Click" prefHeight="110.0" prefWidth="110.0" style="-fx-border-color: #0D6EFD; -fx-border-radius: 20px;" textFill="#0d6efd" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn1" alignment="CENTER" layoutX="164.0" layoutY="10.0" onAction="#btn1Click" prefHeight="110.0" prefWidth="110.0" style="-fx-border-color: #0D6EFD; -fx-border-radius: 20px;" textFill="#0d6efd">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn4" alignment="CENTER" layoutX="25.0" layoutY="10.0" onAction="#btn4Click" prefHeight="110.0" prefWidth="110.0" style="-fx-border-color: #0D6EFD; -fx-border-radius: 20px;" textFill="#0d6efd" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn7" alignment="CENTER" layoutX="25.0" layoutY="118.0" onAction="#btn7Click" prefHeight="110.0" prefWidth="110.0" style="-fx-border-color: #0D6EFD; -fx-border-radius: 20px;" textFill="#0d6efd" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn5" alignment="CENTER" layoutX="25.0" layoutY="226.0" onAction="#btn5Click" prefHeight="110.0" prefWidth="110.0" style="-fx-border-color: #0D6EFD; -fx-border-radius: 20px;" textFill="#0d6efd" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn8" alignment="CENTER" layoutX="164.0" layoutY="118.0" onAction="#btn8Click" prefHeight="110.0" prefWidth="110.0" style="-fx-border-color: #0D6EFD; -fx-border-radius: 20px;" textFill="#0d6efd" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn3" alignment="CENTER" layoutX="164.0" layoutY="226.0" onAction="#btn3Click" prefHeight="110.0" prefWidth="110.0" style="-fx-border-color: #0D6EFD; -fx-border-radius: 20px;" textFill="#0d6efd" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn6" alignment="CENTER" layoutX="303.0" layoutY="10.0" onAction="#btn6Click" prefHeight="110.0" prefWidth="110.0" style="-fx-border-color: #0D6EFD; -fx-border-radius: 20px;" textFill="#0d6efd" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn9" alignment="CENTER" layoutX="303.0" layoutY="118.0" onAction="#btn9Click" prefHeight="110.0" prefWidth="110.0" style="-fx-border-color: #0D6EFD; -fx-border-radius: 20px;" textFill="#0d6efd" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </GridPane>
+      <JFXButton fx:id="btnRestart" alignment="CENTER" layoutX="352.0" layoutY="656.0" onAction="#btnRestartOnAction" prefHeight="40.0" prefWidth="110.0" style="-fx-border-color: #0D6EFD; -fx-border-radius: 10px;" text="Restart" textFill="#0d6efd">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="132.0" fitWidth="110.0" layoutX="665.0" layoutY="608.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+         <image>
+            <Image url="@../img/computer.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblPlayer" alignment="CENTER" contentDisplay="CENTER" layoutX="302.0" layoutY="195.0" prefHeight="40.0" prefWidth="199.0" text="Your Turn" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+         <font>
+            <Font name="Centaur" size="24.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
